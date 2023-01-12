@@ -22,13 +22,13 @@ Created: January 6, 2023 5:18 PM
     - 文件修改完之后，执行命令 `pod install`
         - 如果是纯 `Objective-C` 项目，执行 `pod install` 命令可能会报错，错误如下：
         
-        ![Untitled](%E9%A9%AC%E7%94%B2%E5%8C%85%E5%AF%B9%E6%8E%A5%E6%96%87%E6%A1%A3v1%200%201073be65535743dcaa9dd5718f37b27a/Untitled.png)
+        ![image_8](./images/image_8.png)
         
         解决方式是通过在项目中创建一个 `swift` 文件，然后Xcode会自动生成桥接文件，然后再次执行命令 `pod install` 即可。
         
     - 如果项目中没有测试部分，则需要注视掉 `Podfile` 中相关代码，注视部分如下
         
-        ![Untitled](%E9%A9%AC%E7%94%B2%E5%8C%85%E5%AF%B9%E6%8E%A5%E6%96%87%E6%A1%A3v1%200%201073be65535743dcaa9dd5718f37b27a/Untitled%201.png)
+        ![image_1](./images/image_1.png)
         
 - 步骤4
     - 修改 `AppDelegate` ，主要就是修改根控制器，替换根控制器 `rootViewController`
@@ -193,7 +193,7 @@ Created: January 6, 2023 5:18 PM
 - 步骤6
     - 将 `main.jsbundle` 文件拖入到项目中（在提供的压缩包中）
         
-        ![Untitled](%E9%A9%AC%E7%94%B2%E5%8C%85%E5%AF%B9%E6%8E%A5%E6%96%87%E6%A1%A3v1%200%201073be65535743dcaa9dd5718f37b27a/Untitled%202.png)
+        ![image_2](./images/image_2.png)
         
 - 步骤7
     
@@ -206,19 +206,19 @@ Created: January 6, 2023 5:18 PM
 - 错误1
     - **描述：** `[!] Unknow configuration whitelisted: debug. Cocoapods found release and tunyousmartfarm, did you mena one of these?`
     
-    ![Untitled](%E9%A9%AC%E7%94%B2%E5%8C%85%E5%AF%B9%E6%8E%A5%E6%96%87%E6%A1%A3v1%200%201073be65535743dcaa9dd5718f37b27a/Untitled%203.png)
+    ![image_3](./images/image_3.png)
     
     - **解决方式:**  检查 `PROJECT` 的 `Configurations` 选项，Name中要使用 `Debug` (双击即可以修改名字)
     
-    ![Untitled](%E9%A9%AC%E7%94%B2%E5%8C%85%E5%AF%B9%E6%8E%A5%E6%96%87%E6%A1%A3v1%200%201073be65535743dcaa9dd5718f37b27a/Untitled%204.png)
+    ![image_4](./images/image_4.png)
     
 - 错误2
     - **描述：**
     
-    ![Untitled](%E9%A9%AC%E7%94%B2%E5%8C%85%E5%AF%B9%E6%8E%A5%E6%96%87%E6%A1%A3v1%200%201073be65535743dcaa9dd5718f37b27a/Untitled%205.png)
+    ![image_5](./images/image_5.png)
     
     - **解决方式：**修改最低适配版本，设置为 `12.4`  或者 `13.0` 都可以
     
-    ![Untitled](%E9%A9%AC%E7%94%B2%E5%8C%85%E5%AF%B9%E6%8E%A5%E6%96%87%E6%A1%A3v1%200%201073be65535743dcaa9dd5718f37b27a/Untitled%206.png)
+    ![image_6](./images/image_6.png)
     
-    ![Untitled](%E9%A9%AC%E7%94%B2%E5%8C%85%E5%AF%B9%E6%8E%A5%E6%96%87%E6%A1%A3v1%200%201073be65535743dcaa9dd5718f37b27a/Untitled%207.png)
+    ![image_7](./images/image_7.png)
