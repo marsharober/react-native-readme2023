@@ -1,6 +1,7 @@
 # 马甲包对接文档v1.0
 
-Created: January 6, 2023 5:18 PM
+创建时间：2022年01月06日 15时30分
+修订时间：2022年01月12日 11时20分
 
 ### 前置条件
 
@@ -14,6 +15,8 @@ Created: January 6, 2023 5:18 PM
     - 将提供的 `package.json`文件复制到项目同级目录（在提供的压缩包中）
 - 步骤2
     - 打开终端Terminal，cd到项目位置，执行命令 `yarn install`
+      - 如果存在某些第三方库拉取不下来的，麻烦切换使用不同的 `VPN` 尝试
+      - 如果不是第三方库拉取不下来的，参考 `react-native` 官网配置相关环境，并且创建一个可以运行的 `Demo` 测试一下相关环境➡️ [reactnative.dev](https://reactnative.dev/docs/environment-setup) ➡️ [react-native.cn](https://www.react-native.cn/docs/environment-setup)
 - 步骤3
     - 修改 `Podfile` 文件
         
@@ -217,7 +220,7 @@ Created: January 6, 2023 5:18 PM
     
     ![image_5](./images/image_5.png)
     
-    - **解决方式：**修改最低适配版本，设置为 `12.4`  或者 `13.0` 都可以
+    - **解决方式：**  修改最低适配版本，设置为 `12.4`  或者 `13.0` 都可以
     
     ![image_6](./images/image_6.png)
     
