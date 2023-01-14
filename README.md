@@ -4,7 +4,8 @@
 | :--- | :--- |
 | 2023年1月6日  | 创建对接文档 |
 | 2023年1月12日  | 完善对接文档，info.plist添加部分配置内容 |
-| 2024年1月14日 | 被苹果卡机审的情况下[调试说明](./README_FOR_APPROVED_BY_APPLESTORE.md) |
+| 2023年1月14日 | 被苹果卡机审的情况下[调试说明](./README_FOR_APPROVED_BY_APPLESTORE.md) |
+| 2023年1月14日 | info.plist中屏幕旋转调整⭐️，压缩文件中Podfile内容调整⭐️⭐️ |
 
 
 ### 前置条件
@@ -158,7 +159,7 @@
         
         - 配置 `UISupportedInterfaceOrientations`
         
-        ```swift
+        ```objc
         <key>UISupportedInterfaceOrientations</key>
         <array>
             <string>UIInterfaceOrientationPortrait</string>
@@ -168,6 +169,8 @@
         <key>UISupportedInterfaceOrientations~iphone</key>
         <array>
             <string>UIInterfaceOrientationPortrait</string>
+            <string>UIInterfaceOrientationLandscapeLeft</string>
+            <string>UIInterfaceOrientationLandscapeRight</string>
         </array>
         ```
         
