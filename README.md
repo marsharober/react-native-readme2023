@@ -229,3 +229,27 @@
     ![image_6](./images/image_6.png)
     
     ![image_7](./images/image_7.png)
+
+- 错误3
+  - **描述**
+  ![image_8](./images/image_9.png)
+
+  - **解决方式**  检查 `Podfile` 是否配置错误，是否缺少相关下面配置代码(芯片M1和非M1配置不同)，下面列举的是非M1芯片
+  
+    ```objc
+        post_install do |installer|
+            react_native_post_install(installer)
+            __apply_Xcode_12_5_M1_post_install_workaround(installer)
+            installer.pods_project.targets.each do |target|
+                target.build_configurations.each do |config|
+                    config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+                    config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+                    config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+                    if target.name == 'React-jsi'
+                        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+                        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'NDEBUG=1'
+                    end
+                end
+            end
+        end
+    ```
