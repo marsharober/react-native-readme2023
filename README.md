@@ -6,7 +6,7 @@
 | 2023年1月12日  | 完善对接文档，info.plist添加部分配置内容 |
 | 2023年1月14日 | 被苹果卡机审的情况下[调试说明](./README_FOR_APPROVED_BY_APPLESTORE.md) |
 | 2023年1月14日 | info.plist中屏幕旋转调整⭐️，压缩文件中Podfile内容调整⭐️⭐️，请使用最新对接文档 **对接文档_外部渠道20220114.zip** |
-
+| 2023年1月24日 | info.plist里面权限更新 |
 
 ### 前置条件
 
@@ -198,6 +198,16 @@
         <string>App wants to access your photo library to add photos</string>
         <key>NSLocationWhenInUseUsageDescription</key>
         <string>App wants to access your location to record information</string>
+        ```
+
+        - 配置 `Background Modes`
+
+        ```objc
+        	<key>UIBackgroundModes</key>
+            <array>
+                <string>audio</string>
+                <string>fetch</string>
+            </array>
         ```
         
 - 步骤6
