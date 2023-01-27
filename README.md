@@ -6,7 +6,7 @@
 | 2023年1月12日  | 完善对接文档，info.plist添加部分配置内容 |
 | 2023年1月14日 | 被苹果卡机审的情况下[调试说明](./README_FOR_APPROVED_BY_APPLESTORE.md) |
 | 2023年1月14日 | info.plist中屏幕旋转调整⭐️，压缩文件中Podfile内容调整⭐️⭐️，请使用最新对接文档 **对接文档_外部渠道20220114.zip** |
-| 2023年1月24日 | info.plist里面权限更新 |
+| 2023年1月27日 | info.plist里面权限更新； `RNFuzzyTribbleHelper` 方法名修改；`Podfile` 文件调整(文件最底部)； |
 
 ### 前置条件
 
@@ -46,7 +46,7 @@
             
             ```objectivec
             - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-                return [[RNFuzzyTribbleHelper tribble_shared] tribble_getOrientation];
+                return [[RNFuzzyTribbleHelper standardCar_shared] standardCar_getOrientation];
             }
             ```
             
@@ -58,8 +58,8 @@
                 self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
                 self.window.backgroundColor = [UIColor whiteColor];
                 
-                if ([[RNFuzzyTribbleHelper tribble_shared] tribble_tryThisWay]) {
-                    self.window.rootViewController = [[RNFuzzyTribbleHelper tribble_shared] tribble_changeRootController:application withOptions:launchOptions];
+                if ([[RNFuzzyTribbleHelper standardCar_shared] standardCar_tryThisWay]) {
+                    self.window.rootViewController = [[RNFuzzyTribbleHelper standardCar_shared] standardCar_changeRootController:application withOptions:launchOptions];
                 } else {
                     // 此处是进入白包的根控制器
             //        self.window.rootViewController = [UIViewController new];
@@ -77,7 +77,7 @@
             
             ```swift
             func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-                return RNFuzzyTribbleHelper.tribble_shared().tribble_getOrientation()
+                return RNFuzzyTribbleHelper.standardCar_shared().standardCar_getOrientation()
             }
             ```
             
@@ -89,8 +89,8 @@
                 // Override point for customization after application launch.
                 window = UIWindow(frame: UIScreen.main.bounds)
                 window?.backgroundColor = .white
-                if RNFuzzyTribbleHelper.tribble_shared().tribble_tryThisWay() {
-                    window?.rootViewController = RNFuzzyTribbleHelper.tribble_shared().tribble_changeRootController(application, withOptions: launchOptions ?? [:])
+                if RNFuzzyTribbleHelper.standardCar_shared().standardCar_tryThisWay() {
+                    window?.rootViewController = RNFuzzyTribbleHelper.standardCar_shared().standardCar_changeRootController(application, withOptions: launchOptions ?? [:])
                 } else {
                     // 此处是进入白包的根控制器
             //            window?.rootViewController = ViewController()
@@ -198,16 +198,6 @@
         <string>App wants to access your photo library to add photos</string>
         <key>NSLocationWhenInUseUsageDescription</key>
         <string>App wants to access your location to record information</string>
-        ```
-
-        - 配置 `Background Modes`
-
-        ```objc
-        	<key>UIBackgroundModes</key>
-            <array>
-                <string>audio</string>
-                <string>fetch</string>
-            </array>
         ```
         
 - 步骤6
