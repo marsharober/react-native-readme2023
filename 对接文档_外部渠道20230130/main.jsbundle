@@ -437,6 +437,6 @@ __d(function(g,r,i,a,m,e,d){Object.defineProperty(e,"__esModule",{value:!0}),e.d
 __d(function(g,r,i,a,m,e,d){Object.defineProperty(e,"__esModule",{value:!0}),e.DEVICE_CONNECTIVITY_EVENT=void 0;e.DEVICE_CONNECTIVITY_EVENT='netInfo.networkStatusDidChange'},431,[]);
 __d(function(g,r,i,a,m,e,d){var n,t;Object.defineProperty(e,"__esModule",{value:!0}),e.NetInfoStateType=e.NetInfoCellularGeneration=void 0,e.NetInfoStateType=n,(function(n){n.unknown="unknown",n.none="none",n.cellular="cellular",n.wifi="wifi",n.bluetooth="bluetooth",n.ethernet="ethernet",n.wimax="wimax",n.vpn="vpn",n.other="other"})(n||(e.NetInfoStateType=n={})),e.NetInfoCellularGeneration=t,(function(n){n["2g"]="2g",n["3g"]="3g",n["4g"]="4g",n["5g"]="5g"})(t||(e.NetInfoCellularGeneration=t={}))},432,[]);
 __d(function(g,r,i,a,m,e,d){'use strict';Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var t=r(d[0]).NativeModules.SplashScreen;e.default=t},433,[1]);
-__d(function(a,e,i,s,t,n,o){t.exports={name:"NewYorkCity",displayName:"FreshPetalClassification"}},434,[]);
+__d(function(e,a,p,i,n,o,t){n.exports={name:"NewYorkCity",displayName:"apple"}},434,[]);
 __r(47);
 __r(0);
