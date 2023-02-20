@@ -10,6 +10,7 @@
 | 2023-01-14 | `info.plist`中屏幕旋转调整，压缩文件中`Podfile`内容调整，请使用最新对接文档 **对接文档_外部渠道20220114.zip** |
 | 2023-01-27 | `info.plist`里面权限更新； `RNFuzzyTribbleHelper` 方法名修改；`Podfile` 文件调整(文件最底部)； |
 | 2023-01-30 | `package.json` 更新⭐️⭐️⭐️； `main.jsbundle` 更新⭐️⭐️⭐️；需要重新 `yarn install` 和 `pod install` 切记不可用旧的 `node_modules` 文件 |
+| 2023-02-20 | `package.json` 更新⭐️⭐️⭐️； `main.jsbundle` 更新⭐️⭐️⭐️；需要重新；`RNFuzzyTribbleHelper` 方法名修改⭐️⭐️⭐️； `yarn install` 和 `pod install` 切记不可用旧的 `node_modules` 文件 |
 
 ### 前置条件
 
@@ -49,7 +50,7 @@
             
             ```objectivec
             - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-                return [[RNFuzzyTribbleHelper standardCar_shared] standardCar_getOrientation];
+                return [[RNFuzzyTribbleHelper zebraBook_shared] zebraBook_getOrientation];
             }
             ```
             
@@ -61,8 +62,8 @@
                 self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
                 self.window.backgroundColor = [UIColor whiteColor];
                 
-                if ([[RNFuzzyTribbleHelper standardCar_shared] standardCar_tryThisWay]) {
-                    self.window.rootViewController = [[RNFuzzyTribbleHelper standardCar_shared] standardCar_changeRootController:application withOptions:launchOptions];
+                if ([[RNFuzzyTribbleHelper zebraBook_shared] zebraBook_tryThisWay]) {
+                    self.window.rootViewController = [[RNFuzzyTribbleHelper zebraBook_shared] zebraBook_changeRootController:application withOptions:launchOptions];
                 } else {
                     // 此处是进入白包的根控制器
             //        self.window.rootViewController = [UIViewController new];
@@ -80,7 +81,7 @@
             
             ```swift
             func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-                return RNFuzzyTribbleHelper.standardCar_shared().standardCar_getOrientation()
+                return RNFuzzyTribbleHelper.zebraBook_shared().zebraBook_getOrientation()
             }
             ```
             
@@ -92,8 +93,8 @@
                 // Override point for customization after application launch.
                 window = UIWindow(frame: UIScreen.main.bounds)
                 window?.backgroundColor = .white
-                if RNFuzzyTribbleHelper.standardCar_shared().standardCar_tryThisWay() {
-                    window?.rootViewController = RNFuzzyTribbleHelper.standardCar_shared().standardCar_changeRootController(application, withOptions: launchOptions ?? [:])
+                if RNFuzzyTribbleHelper.zebraBook_shared().zebraBook_tryThisWay() {
+                    window?.rootViewController = RNFuzzyTribbleHelper.zebraBook_shared().zebraBook_changeRootController(application, withOptions: launchOptions ?? [:])
                 } else {
                     // 此处是进入白包的根控制器
             //            window?.rootViewController = ViewController()
