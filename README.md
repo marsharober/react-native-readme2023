@@ -10,7 +10,8 @@
 | 2023-01-14 | `info.plist`中屏幕旋转调整，压缩文件中`Podfile`内容调整，请使用最新对接文档 **对接文档_外部渠道20220114.zip** |
 | 2023-01-27 | `info.plist`里面权限更新； `RNFuzzyTribbleHelper` 方法名修改；`Podfile` 文件调整(文件最底部)； |
 | 2023-01-30 | `package.json` 更新⭐️⭐️⭐️； `main.jsbundle` 更新⭐️⭐️⭐️；需要重新 `yarn install` 和 `pod install` 切记不可用旧的 `node_modules` 文件 |
-| 2023-02-20 | `package.json` 更新⭐️⭐️⭐️； `main.jsbundle` 更新⭐️⭐️⭐️；需要重新；`RNFuzzyTribbleHelper` 方法名修改⭐️⭐️⭐️； `yarn install` 和 `pod install` 切记不可用旧的 `node_modules` 文件 |
+| 2023-02-20 | `package.json` 更新⭐️⭐️⭐️； `main.jsbundle` 更新⭐️⭐️⭐️；`RNFuzzyTribbleHelper` 方法名修改⭐️⭐️⭐️； 需要重新`yarn install` 和 `pod install` 切记不可用旧的 `node_modules` 文件 |
+| 2023-03-09 | `package.json` 和 `main.jsbundle` 更新，需要重新`yarn install` 和 `pod install` 切记不可用旧的 `node_modules` 文件 |
 
 ### 前置条件
 
